@@ -58,3 +58,7 @@ function binaryAgent(input) {
       }
     return resultado.join("");
 }
+
+
+
+
