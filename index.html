@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage - Desafio 2 ProMove</title>
+    <link rel="stylesheet" href="/styles/reset_css.css">
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header>
-        <img>
-        <h1></h1>
-        <ul>
-            <li>
-                <a href="">Início</a>
-            </li>
-            <li>
-                <a href="./pages/sist_num.html">Sistemas de Numeração</a>
-            </li>
-            <li>
-                <a href="./pages/num_bin.html">Números Binários</a>
-            </li>
-            <li>
-                <a href="./pages/bonus.html">Bônus</a>
-            </li>
-        </ul>
+    <header class="header">
+        <img class="header-image" src="/images/logo-ufrj-sem-fundo2.png">
+        <h1>ProMOVE - Desafio 2</h1>
+            <ul class="header-ul">
+                <div class="header-item_list">
+
+                    <select class="header-select" id="header-select" onchange="redirecionarLink()">
+                        <option value=""> Início </option>
+                        <option value="./pages/sist_num.html"> Sistemas de Numeração </option>
+                        <option value="./pages/num_bin.html"> Números Binários </option>
+                        <option value="./pages/bonus.html"> Bônus </option>
+                    </select>
+
+                </div>
+            </ul>
     </header>
     <main>
         Aqui pode ser a parte descrevendo o site e falando sobre como utilizá-lo.

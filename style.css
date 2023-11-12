@@ -1,0 +1,14 @@
+.header {
+    background-color: aqua;
+    height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-select {
+    background-color: darkgray;
+    color: #fff;
+    cursor: pointer;
+    padding: 1em;
+}

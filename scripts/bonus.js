@@ -60,3 +60,12 @@ function checkNumber(resultadoOp) {
     }
     return resultadoBinario;
 }
+
+
+const botaoEnviarPergunta = document.querySelector(".bonus-section2-button-perguntas");
+
+botaoEnviarPergunta.addEventListener("click", function () {
+
+});
+
+
