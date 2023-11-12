@@ -1,8 +1,8 @@
 // JavaScript da Página Bônus
 
-const botaoBonusCalculadora = document.querySelector(".bonus-section1-button-calcular");
+const botaoCalculadora = document.querySelector(".bonus-section1-button-calcular");
 
-botaoBonusCalculadora.addEventListener("click", function(){
+botaoCalculadora.addEventListener("click", function(){
     let valorInputNumero1 = Number(document.querySelector(".bonus-section1-input1").value);
     let valorInputNumero2 = Number(document.querySelector(".bonus-section1-input2").value);
     let resultadoOp = "";
