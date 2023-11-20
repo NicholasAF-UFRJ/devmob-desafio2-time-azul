@@ -62,50 +62,23 @@ function checkNumber(resultadoOp) {
 }
 
 
-let respostasCorretas = ["alternativa2", "alternativa4", "alternativa1"]
+function testFunction(botao) {
+    let botaoGrupo = botao.name; //pego qual o botao foi selecionado
+    let respostasCorretas = ["alternativa2", "alternativa4", "alternativa1"]; //lista das alternativas corretas
 
-const botaoEnviarPergunta1 = document.querySelector(".bonus-section2-button-pergunta1");
-const botaoEnviarPergunta2 = document.querySelector(".bonus-section2-button-pergunta2");
-const botaoEnviarPergunta3 = document.querySelector(".bonus-section2-button-pergunta3");
+    let opcao = document.querySelector(`input[name="${botaoGrupo}"]:checked`).value; //pego qual opção foi marcada;
 
-botaoEnviarPergunta1.addEventListener("click", function () {
 
-    let opcao = document.querySelector('input[name="pergunta1"]:checked').value;
-    let paragrafoTeste = document.querySelector(".paragrafo-teste");
+    let charGrupo = botaoGrupo.charAt(botaoGrupo.length - 1); //último caracter do nome do grupo (para pegar o número)
+    let paragrafo = document.querySelector(`p[name="${botaoGrupo}"]`); //parágrafo referente ao botao apertado
 
-    if (opcao == respostasCorretas[0]) {
-        paragrafoTeste.textContent = "Resposta Correta! 😁"
+    if (respostasCorretas[charGrupo-1] === opcao) {
+        paragrafo.textContent = "Resposta correta! 😁";
     } else {
-        paragrafoTeste.textContent = "Resposta Errada! 😖"
+        paragrafo.textContent = "Resposta errada! 😖";
     }
+}
 
-});
-
-botaoEnviarPergunta2.addEventListener("click", function () {
-
-    let opcao = document.querySelector('input[name="pergunta2"]:checked').value;
-    let paragrafoTeste = document.querySelector(".paragrafo-teste2");
-
-    if (opcao == respostasCorretas[1]) {
-        paragrafoTeste.textContent = "Resposta Correta! 😁"
-    } else {
-        paragrafoTeste.textContent = "Resposta Errada! 😖"
-    }
-
-});
-
-botaoEnviarPergunta3.addEventListener("click", function () {
-
-    let opcao = document.querySelector('input[name="pergunta3"]:checked').value;
-    let paragrafoTeste = document.querySelector(".paragrafo-teste3");
-
-    if (opcao == respostasCorretas[2]) {
-        paragrafoTeste.textContent = "Resposta Correta! 😁"
-    } else {
-        paragrafoTeste.textContent = "Resposta Errada! 😖"
-    }
-
-});
 
 
 
