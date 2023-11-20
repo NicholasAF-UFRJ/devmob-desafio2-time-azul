@@ -1,0 +1,15 @@
+.conversor {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+#change-icon {
+  align-self: start;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
