@@ -30,10 +30,7 @@
       </ul>
     </nav>
     <main>
-      Aqui pode ser a parte descrevendo a tabela ASCII e conversão
-      texto<->binário utilizando a tabela ASCII. (ponto 3) Pode-se também
-      possuir a tabela ASCII aqui (ponto 4)
-
+      <h1>Conversor</h1>
       <section class="conversor">
         <article>
           <h3 id="txt-input">Texto</h3>
@@ -51,8 +48,223 @@
           <textarea id="result" rows="4" cols="60"></textarea>
         </article>
       </section>
+      <button type="button" class="collapsible">
+        Entenda como funciona a conversão
+      </button>
+      <section class="content">
+        <h3>Tabela ASCII</h3>
+        <article class="ascii">
+          <p>
+            Vamos desvendar o universo dos computadores e entender como eles,
+            que são originalmente craques em lidar com números, conseguem também
+            dominar a arte das palavras!
+          </p>
+          <p>
+            Então, imagine os computadores como verdadeiros gênios matemáticos,
+            mas com uma língua própria chamada "binário". Em vez dos números
+            tradicionais, eles se comunicam usando apenas zeros e uns. Isso
+            acontece porque os computadores adoram brincar com sinais elétricos,
+            onde o 0 significa "circuito desligado" e o 1 significa "diferença
+            de potencial". É tipo o idioma secreto dos chips!
+          </p>
+          <p>
+            Agora, sabemos que os computadores não são só nerds dos números,
+            eles também são craques em lidar com textos, algo superessencial
+            para todos nós, porque é uma das formas de nós nos comunicarmos no
+            dia a dia. Mas como eles fazem isso quando só entendem zeros e uns?
+          </p>
+          <p>
+            A sacada é associar cada letra a um único número em binário. Assim,
+            os textos se transformam em sequências de números de 0 e 1, que é a
+            linguagem que os computadores são capazes de entender. Com isso, na
+            prática, quando digitamos no teclado de um computador, por exemplo,
+            cada caractere é convertido em uma sequência de 0 e 1 e como um
+            texto é uma sequência de vários caracteres, terá várias e várias
+            sequências de números binários, mas isso não é um problema para um
+            computador, que é super rápido em fazer cálculo.
+          </p>
+          <figure>
+            <image src="../images/ascii-table.png" />
+          </figure>
+        </article>
+        <h3>Conversão texto em binário</h3>
+        <article class="conversao-txt-bin">
+          <p>
+            Para converter de texto para número binário, não tem segredo: basta
+            pegar o número decimal associado a cada caractere do texto na tabela
+            ASCII e converter cada um para binário, como aprendido no primeiro
+            tópico do curso! Por exemplo, se
+          </p>
+          <p>
+            Converter texto para binário na codificação ASCII envolve
+            representar cada caractere do texto como uma sequência de bits,
+            seguindo os códigos ASCII correspondentes. Aqui está um guia passo a
+            passo:
+          </p>
+          <p>
+            <strong>Escolha o texto:</strong> Comece com o texto ou palavra que
+            você deseja converter em binário. Por exemplo, "programar".
+          </p>
+          <p>
+            Converta para Códigos ASCII: Consulte uma tabela ASCII para
+            encontrar os códigos correspondentes a cada caractere no texto. Aqui
+            estão os códigos ASCII para "programar":
+          </p>
+          <table>
+            <tr>
+              <th>Letra</th>
+              <th>Código ASCII</th>
+            </tr>
+            <tr>
+              <td>p</td>
+              <td>112</td>
+            </tr>
+            <tr>
+              <td>r</td>
+              <td>114</td>
+            </tr>
+            <tr>
+              <td>o</td>
+              <td>111</td>
+            </tr>
+            <tr>
+              <td>g</td>
+              <td>103</td>
+            </tr>
+            <tr>
+              <td>r</td>
+              <td>114</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td>m</td>
+              <td>109</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td>r</td>
+              <td>114</td>
+            </tr>
+          </table>
+          <p>
+            <strong>Converta cada código para binário:</strong> Converta cada
+            código ASCII para sua representação binária de 8 bits (1 byte).
+            Certifique-se de incluir zeros à esquerda, se necessário, para
+            completar os 8 bits.
+          </p>
+          <table>
+            <tr>
+              <th>Letra (Código ASCII)</th>
+              <th>Código Binário</th>
+            </tr>
+            <tr>
+              <td>p (112)</td>
+              <td>01110000</td>
+            </tr>
+            <tr>
+              <td>r (114)</td>
+              <td>01110010</td>
+            </tr>
+            <tr>
+              <td>o (111)</td>
+              <td>01101111</td>
+            </tr>
+            <tr>
+              <td>g (103)</td>
+              <td>01100111</td>
+            </tr>
+            <tr>
+              <td>r (114)</td>
+              <td>01110010</td>
+            </tr>
+            <tr>
+              <td>a (97)</td>
+              <td>01100001</td>
+            </tr>
+            <tr>
+              <td>m (109)</td>
+              <td>01101101</td>
+            </tr>
+            <tr>
+              <td>a (97)</td>
+              <td>01100001</td>
+            </tr>
+            <tr>
+              <td>r (114)</td>
+              <td>01110010</td>
+            </tr>
+          </table>
+          <p>
+            Junte os Binários: Junte todas as sequências binárias obtidas para
+            formar a representação binária do texto completo.
+          </p>
+          <p>
+            "programar" em binário: 01110000 01110010 01101111 01100111 01110010
+            01100001 01101101 01100001 01110010
+          </p>
+        </article>
+        <h3>Conversão binário em texto</h3>
+        <article class="conversao-bin-txt">
+          <p>
+            Converter um número binário para texto envolve associar grupos de
+            bits a caracteres específicos com base em alguma codificação, como a
+            ASCII. Vou explicar o processo básico:
+          </p>
+          <p>
+            <strong>Divida em grupos de 8 bits (1 Byte):</strong> Os caracteres
+            na codificação ASCII são representados por 8 bits (1 byte).
+            Portanto, se o seu número binário não for um múltiplo de 8, adicione
+            zeros à esquerda para torná-lo um número de bits múltiplo de 8.
+          </p>
+          <p>
+            <strong>Converta para números decimais:</strong> Agora, divida o
+            número binário em grupos de 8 bits e converta cada grupo para seu
+            equivalente decimal. Isso resultará em valores entre 0 e 255, que
+            são os códigos ASCII correspondentes.
+          </p>
+          <p>
+            <strong>Associe aos caracteres ASCII:</strong> Use uma tabela ASCII
+            para associar cada valor decimal a um caractere específico. Por
+            exemplo, o valor 65 corresponde à letra "A".
+          </p>
+          <p>
+            <strong>Junte os caracteres:</strong> Junte todos os caracteres
+            obtidos para formar o texto completo.
+          </p>
+          <p>
+            Vamos a um exemplo prático. Suponha que você tenha o número binário
+            01001000 01100101 01101100 01101100 01101111:
+          </p>
+          <p>
+            Divida em grupos de 8 bits: 01001000, 01100101, 01101100, 01101100,
+            01101111. Converta para decimais: 72, 101, 108, 108, 111. Associe os
+            caracteres da tabela ASCII: "H", "e", "l", "l", "o". Junte os
+            caracteres: "Hello". Portanto, o número binário 01001000 01100101
+            01101100 01101100 01101111 representa a palavra "Hello" em texto.
+          </p>
+        </article>
+      </section>
     </main>
     <footer></footer>
   </body>
   <script src="/scripts/num_bin.js"></script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) content.style.maxHeight = null;
+        else content.style.maxHeight = content.scrollHeight + "px";
+      });
+    }
+  </script>
 </html>
