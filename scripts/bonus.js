@@ -62,10 +62,51 @@ function checkNumber(resultadoOp) {
 }
 
 
-const botaoEnviarPergunta = document.querySelector(".bonus-section2-button-perguntas");
+let respostasCorretas = ["alternativa2", "alternativa4", "alternativa1"]
 
-botaoEnviarPergunta.addEventListener("click", function () {
+const botaoEnviarPergunta1 = document.querySelector(".bonus-section2-button-pergunta1");
+const botaoEnviarPergunta2 = document.querySelector(".bonus-section2-button-pergunta2");
+const botaoEnviarPergunta3 = document.querySelector(".bonus-section2-button-pergunta3");
+
+botaoEnviarPergunta1.addEventListener("click", function () {
+
+    let opcao = document.querySelector('input[name="pergunta1"]:checked').value;
+    let paragrafoTeste = document.querySelector(".paragrafo-teste");
+
+    if (opcao == respostasCorretas[0]) {
+        paragrafoTeste.textContent = "Resposta Correta! 😁"
+    } else {
+        paragrafoTeste.textContent = "Resposta Errada! 😖"
+    }
 
 });
+
+botaoEnviarPergunta2.addEventListener("click", function () {
+
+    let opcao = document.querySelector('input[name="pergunta2"]:checked').value;
+    let paragrafoTeste = document.querySelector(".paragrafo-teste2");
+
+    if (opcao == respostasCorretas[1]) {
+        paragrafoTeste.textContent = "Resposta Correta! 😁"
+    } else {
+        paragrafoTeste.textContent = "Resposta Errada! 😖"
+    }
+
+});
+
+botaoEnviarPergunta3.addEventListener("click", function () {
+
+    let opcao = document.querySelector('input[name="pergunta3"]:checked').value;
+    let paragrafoTeste = document.querySelector(".paragrafo-teste3");
+
+    if (opcao == respostasCorretas[2]) {
+        paragrafoTeste.textContent = "Resposta Correta! 😁"
+    } else {
+        paragrafoTeste.textContent = "Resposta Errada! 😖"
+    }
+
+});
+
+
 
 
